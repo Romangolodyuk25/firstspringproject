@@ -8,34 +8,37 @@
 		<version>2.7.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>person.romchik</groupId>
-	<artifactId>firstspringproject</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>firstspringproject</name>
-	<description>This is my first project for Spring Boot</description>
-	<properties>
-		<java.version>17</java.version>
-		<kotlin.version>1.6.21</kotlin.version>
+	<groupId>person.romchik</groupId> <!-- Идентификатор всех моих проектов -->
+	<artifactId>firstspringproject</artifactId><!-- Наименование и идентификатор конкретного проекта(этого) -->
+	<version>0.0.1-SNAPSHOT</version><!-- Версия этого конкретного проекта -->
+	<name>firstspringproject</name><!-- Просто Имя конкретного проекта -->
+	<description>This is my first project for Spring Boot</description><!-- Просто описание проекта(ни на что не влияет) -->
+	<properties><!-- Параметры с которыми будет собираться сервис(Параметры сборки сервиса) -->
+		<java.version>16</java.version><!-- Версия Java c которог будет запускаться проект -->
+		<kotlin.version>1.6.21</kotlin.version><!-- Версия Kotlin с которой запускается прокет -->
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+	<dependencies><!-- ЗАВИСИМОСТИ(БИБЛИОТЕКИ) которые нужны что бы проект работал -->
+		<!-- ПЕРВАЯ ЗАВИСИМОСТЬ - Spring WEB - там находятся все инструменты для работы с HTTP(для работы с интернетом) -->
+		<dependency><!-- Это Начало описания зависимости которая нам нужна -->
+			<groupId>org.springframework.boot</groupId><!-- Групповой идентификатор обозначающй - У КОГО МЫ БЕРЕМ ЗАВИСИМОСТЬ -->
+			<artifactId>spring-boot-starter-web</artifactId><!-- ИДентификатор проекта который обозначает зависимоть -->
+			<!-- по groupId и artifactId MAVEN понимает какую БИБЛИОТЕКУ взять и ОТКУДА -->
 		</dependency>
+		<!-- ВТОРАЯ Зависимость - Нужна для работы с JSON(Джейсон) -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.module</groupId>
 			<artifactId>jackson-module-kotlin</artifactId>
 		</dependency>
-		<dependency>
+		<dependency><!-- Что бы Spring рфботал на КОтлине Они будут В ЛЮБОИ ПРОЕКТЕ -->
 			<groupId>org.jetbrains.kotlin</groupId>
 			<artifactId>kotlin-reflect</artifactId>
 		</dependency>
-		<dependency>
+		<dependency><!-- Что бы SPRING работал на КОТЛИНЕ они будут в ЛЮБОМ ПРОЕКТЕ -->
 			<groupId>org.jetbrains.kotlin</groupId>
 			<artifactId>kotlin-stdlib-jdk8</artifactId>
 		</dependency>
 
-		<dependency>
+		<dependency><!-- ЗАВИСИМОСТЬ(БИБЛИОТЕКА) для того что бы можно было вызывать тесты на мой код -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
