@@ -1,5 +1,7 @@
 package person.romchik.firstspringproject.services
 
+import org.springframework.http.HttpStatus
+import person.romchik.firstspringproject.exceptions.ServiceException
 import person.romchik.firstspringproject.models.Car
 
 //@Service // Помечает класс, как сервисный класс, который можно использовать в этой программе, todo: Раскомментировать
@@ -33,6 +35,9 @@ class CarService {
      * Метод который Находит Машину в MAP по парметру Id
      */
     fun searchCar(id: Long): Car {
+        if (cars.contains(id)==false){
+            throw ServiceException(HttpStatus.NOT_FOUND,"Car with this id does not exist")
+        }
         return cars.get(id)!!
     }
 
