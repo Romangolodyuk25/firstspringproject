@@ -1,4 +1,4 @@
-package person.romchik.firstspringproject
+package person.romchik.firstspringproject.models
 
 class Car() {
      var brand: String? = null

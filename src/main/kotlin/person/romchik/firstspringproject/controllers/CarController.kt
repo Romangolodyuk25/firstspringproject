@@ -1,6 +1,8 @@
-package person.romchik.firstspringproject
+package person.romchik.firstspringproject.controllers
 
 import org.springframework.web.bind.annotation.*
+import person.romchik.firstspringproject.services.CarService
+import person.romchik.firstspringproject.models.Car
 
 @RestController
 class CarController() {
@@ -22,13 +24,14 @@ class CarController() {
     }
 
     @GetMapping("/cars/{id}")
-    fun searchCar (@PathVariable id:Long):Car {
+    fun searchCar (@PathVariable id:Long): Car {
         return carService.searchCar(id)
     }
 
     @PutMapping("/cars/{id}")
     fun uppdateCar (@PathVariable id: Long,
-                    @RequestBody car: Car) {
+                    @RequestBody car: Car
+    ) {
         carService.update(id,car)
     }
 

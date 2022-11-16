@@ -1,6 +1,6 @@
-package person.romchik.firstspringproject
+package person.romchik.firstspringproject.services
 
-import org.springframework.stereotype.Service
+import person.romchik.firstspringproject.models.Car
 
 //@Service // Помечает класс, как сервисный класс, который можно использовать в этой программе, todo: Раскомментировать
 class CarService {
@@ -39,7 +39,7 @@ class CarService {
     /**
      * Метод который Находит по Id Машину в MAP и Изменяет ее на другую Машину
      */
-    fun update(id:Long, car:Car) {
+    fun update(id:Long, car: Car) {
         cars.get(id)!!.brand = car.brand
         cars.get(id)!!.year = car.year
         cars.get(id)!!.color = car.color

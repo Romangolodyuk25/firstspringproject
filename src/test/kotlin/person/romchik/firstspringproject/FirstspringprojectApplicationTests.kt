@@ -2,6 +2,8 @@ package person.romchik.firstspringproject
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
+import person.romchik.firstspringproject.models.Car
+import person.romchik.firstspringproject.services.CarService
 
 @SpringBootTest
 class FirstspringprojectApplicationTests {

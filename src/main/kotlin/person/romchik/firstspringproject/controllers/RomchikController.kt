@@ -1,4 +1,4 @@
-package person.romchik.firstspringproject
+package person.romchik.firstspringproject.controllers
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
