@@ -60,7 +60,5 @@ class FirstspringprojectApplicationTests {
 		for ((key, value) in result) {
 			println(key.toString() + " " + value.brand + " " + value.year + " " + value.color + " " + value.isNew + " " + value.mileage + " " + value.model + " " + value.volume)
 		}
-
-
 	}
 }
