@@ -28,6 +28,9 @@ class CarService {
      * Метод который УДАЛЯЕТ машину по параметру Id из MAP
      */
     fun deleteCar(id: Long) {
+        if (cars.contains(id)==false){
+            throw ServiceException(HttpStatus.NOT_FOUND, "Car with this id does not exist")
+        }
         cars.remove(id)
     }
 
@@ -45,6 +48,9 @@ class CarService {
      * Метод который Находит по Id Машину в MAP и Изменяет ее на другую Машину
      */
     fun update(id:Long, car: Car) {
+        if(cars.contains(id)==false){
+            throw ServiceException(HttpStatus.NOT_FOUND, "Car with this id does not exist")
+        }
         cars.get(id)!!.brand = car.brand
         cars.get(id)!!.year = car.year
         cars.get(id)!!.color = car.color
